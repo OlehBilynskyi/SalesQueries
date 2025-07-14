@@ -1,0 +1,23 @@
+1.Використовуємо запит: USE my_database;
+для вибору нашої бази даних
+Скріншот: 01_USE my_database
+2.Створюємо таблицю: CREATE TABLE IF NOT EXISTS sales
+Скріншот: 02_CREATE TABLE
+3.Вставляємо дані у таблицю: INSERT INTO sales
+Скріншот: 03_INSERT INTO
+4.Виводимо всі записи: SELECT * FROM sales;
+Скріншот: 04_SELECT * FROM
+5.Вибірка з обмеженням (LIMIT): вибираємо перші два записи з таблиці
+SELECT * FROM sales
+LIMIT 2;
+Скріншот: 05_LIMIT
+6.Обчислюємо загальну вартість всіх продуктів:
+SELECT SUM(price * quantity) AS total_value FROM sales;
+Скріншот: 06_SELECT SUM
+7.Групуємо дані за назвою продукту:
+SELECT product,
+SUM(quantity) AS total_quantity,
+AVG(price) AS average_price
+FROM sales
+GROUP BY product;
+Скріншот: 07_GROUP BY
